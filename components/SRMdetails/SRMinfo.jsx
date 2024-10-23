@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import Colors from '../../constants/Colors'
-import Ionicons from '@expo/vector-icons/Ionicons';
+import MarkFav from '../MarkFav';
 
 export default function SRMinfo({SRM}) {
   return (
@@ -9,7 +9,7 @@ export default function SRMinfo({SRM}) {
       <Image source={{uri:SRM.imageUrl}}
       style={{
         width:'100%',
-        height:350,
+        height:300,
         objectFit:'cover'
       }}
       />
@@ -28,7 +28,7 @@ export default function SRMinfo({SRM}) {
           }}>{SRM?.name}</Text>
           
         </View>
-        <Ionicons name="heart-outline" size={30} color="black" />
+        <MarkFav SRM={SRM}/>
       </View>
     </View>
   )
